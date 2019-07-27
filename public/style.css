@@ -1,0 +1,11 @@
+body{
+  text-align: center;
+}
+section{
+  background-color: rgba(69, 150, 162, 0.5);
+  margin: 100px 0 0 36%;
+  width: 30%
+}
+span{
+  color:black;
+}

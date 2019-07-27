@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>MY APP</title>
+</head>
+
+<body>
+  <section>
+    <div>
+      <h2>Angry Letter</h2>
+      <button id="delete"> Delete your angry letter, dont send it.</button>
+    </div>
+    <ul class="quotes">
+      <% for(var i=0; i<quotes.length; i++) {%>
+      <li class="quotes">
+        <span style="color:<%= quotes[i].color %>"><%= quotes[i].name %></span>
+        <span style="color:<%= quotes[i].color %>"><%= quotes[i].quote %></span>
+        <button type="button" name="button" class="change">Red<%= quotes[i].buttonColor %></button>
+      </li>
+      <% } %>
+    </ul>
+
+    <form action="/quotes" method="POST">
+      <input type="text" placeholder="name" name="name">
+      <input type="text" placeholder="quote" name="quote">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <script src="main.js"></script>
+</body>
+
+</html>
